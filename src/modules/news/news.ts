@@ -16,7 +16,7 @@ export class News {
         const { title, desc, imgUrl} =  req.body;
 
         const news = new model({
-            title, desc, imgUrl
+            title, desc, imgUrl, created_at: new Date(), updated_at: new Date()
         })
         news.save()
         res.status(200).json({

@@ -16,7 +16,7 @@ export class Publications {
         const { name, desc, imgUrl, fileUrl} =  req.body;
 
         const publication = new model({
-            name, desc, imgUrl, fileUrl
+            name, desc, imgUrl, fileUrl,created_at: new Date(), updated_at: new Date()
         })
         publication.save()
         res.status(200).json({

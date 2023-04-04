@@ -29,7 +29,7 @@ class News {
         return __awaiter(this, void 0, void 0, function* () {
             const { title, desc, imgUrl } = req.body;
             const news = new model_1.default({
-                title, desc, imgUrl
+                title, desc, imgUrl, created_at: new Date(), updated_at: new Date()
             });
             news.save();
             res.status(200).json({

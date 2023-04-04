@@ -16,7 +16,7 @@ export class Employees {
         const { fullname, position, degree, university, imgUrl} =  req.body;
 
         const employee = new model({
-            fullname, position, degree, university, imgUrl
+            fullname, position, degree, university, imgUrl, created_at: new Date(), updated_at: new Date()
         })
         employee.save()
         res.status(200).json({

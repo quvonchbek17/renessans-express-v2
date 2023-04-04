@@ -103,6 +103,7 @@ class FileUpload {
                     type: file.mimetype,
                     url: "https://api.renessans-service.uz/api/v1/files/" + fileName,
                     downloadUrl: "https://api.renessans-service.uz/api/v1/files/download/" + fileName,
+                    created_at: new Date()
                 });
                 yield newFile.save();
                 yield file.mv(path_1.default.join(__dirname + "../../../../../files/" + fileName), (err) => {

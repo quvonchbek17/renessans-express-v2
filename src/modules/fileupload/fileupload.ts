@@ -105,6 +105,7 @@ export class FileUpload {
         type: file.mimetype,
         url: "https://api.renessans-service.uz/api/v1/files/" + fileName,
         downloadUrl: "https://api.renessans-service.uz/api/v1/files/download/" + fileName,
+        created_at: new Date()
       });
 
       await newFile.save();

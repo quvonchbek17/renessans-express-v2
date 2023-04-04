@@ -17,12 +17,10 @@ const newsSchema = new mongoose_1.Schema({
         type: String
     },
     created_at: {
-        type: Date,
-        default: new Date()
+        type: Date
     },
     updated_at: {
-        type: Date,
-        default: new Date()
+        type: Date
     }
 }, {
     collection: "news"

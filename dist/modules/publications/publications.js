@@ -29,7 +29,7 @@ class Publications {
         return __awaiter(this, void 0, void 0, function* () {
             const { name, desc, imgUrl, fileUrl } = req.body;
             const publication = new model_1.default({
-                name, desc, imgUrl, fileUrl
+                name, desc, imgUrl, fileUrl, created_at: new Date(), updated_at: new Date()
             });
             publication.save();
             res.status(200).json({
